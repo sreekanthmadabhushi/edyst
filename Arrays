@@ -1,0 +1,12 @@
+class Solution:
+    def repeatedNumber(self, a):
+        # write your method here
+        l=len(a)
+        duplicate=-1
+        for i in range(l):
+            if a[abs(a[i])]<0:
+                duplicate=abs(a[i])
+                break
+            else:
+                a[abs(a[i])]*=-1
+        return duplicate
